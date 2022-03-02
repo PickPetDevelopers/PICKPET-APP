@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".OnBoarding.OnBoardingSecondActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_rawRes="@raw/on_boarding_second"
+        app:lottie_autoPlay="true"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:textSize="20sp"
+        android:layout_below="@id/lottie"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/regularColor"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easily adopt your favorite pet"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/regularColor"
+        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:text="Find the best pet near you and adopt your favorite one"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_below="@id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_margin="30dp"
+        tools:ignore="HardcodedText" />
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_below="@id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textAllCaps="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="-25dp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

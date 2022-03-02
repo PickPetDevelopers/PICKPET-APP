@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Fragments.SearchCategoryViewFragment">
+
+    <TextView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/secondaryColor"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btnFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"
+        android:textColor="@color/secondaryColor"
+        android:drawableRight="@drawable/ic_filter_24"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/search_bg"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFilter"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

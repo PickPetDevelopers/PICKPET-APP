@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".Fragments.SearchFragment">
+
+    <EditText
+        android:id="@+id/search"
+        android:background="@drawable/search_bg"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search your favorite pet"
+        android:inputType="textCapWords"
+        tools:ignore="HardcodedText"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_search_24" />
+
+    <TextView
+        android:id="@+id/categoriesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your categories"
+        android:layout_below="@id/search"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/regularColor"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/categoriesTxt"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBtnAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBtnDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dogs"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBtnCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cats"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBtnParrot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parrot"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBtnBird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birds"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBtnFish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fish"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/recentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Searched"
+        android:layout_below="@id/chipGroup"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/regularColor"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/clearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chipGroup"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryColor"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recentRecycleView"
+        android:layout_below="@id/recentTxt"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
